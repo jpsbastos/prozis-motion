@@ -1,4 +1,8 @@
 export interface IBall {
-    xInitial: number,
-    yPosition: number,
+    diameter: number;
+    hslColor: number;
+    initialX: number;
+    initialY: number;
+    initialVelocityX: number;
+    initialVelocityY: number;
 }

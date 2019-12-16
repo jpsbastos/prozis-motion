@@ -6,20 +6,20 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.17",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.0",
-    "typescript": "^3.7.3"
+    "react-scripts": "3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest --config=jest.config.js --no-cache",
+    "test:watch": "npm run test -- --watch",
+    "docs": "typedoc -out docs",
+    "coverage": "rm -Rf ./coverage && jest --config=jest.config.js --coverage --no-cache --maxWorkers 2"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +35,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.4",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jasmine": "^3.5.0",
+    "@types/jest": "^24.0.23",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "jasmine": "^3.5.0",
+    "jest": "^24.9.0",
+    "jest-junit-reporter": "^1.1.0",
+    "ts-jest": "^24.2.0",
+    "typedoc": "^0.15.5",
+    "typescript": "^3.7.3"
   }
 }
